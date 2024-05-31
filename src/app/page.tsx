@@ -10,11 +10,11 @@ import Link from 'next/link';
 
 const articles = [
   {
-    title: 'The last post in notasdev wreating for dantech from notion',
+    title: 'Integracion de notion con nextjs y tailwindcss',
     description:
       'Primera publicacion en notasdev en donde se mostrara el objetivo del blog, que a temas se estaran tratando y como se ara esta publicacion',
     author: 'dantech',
-    date: '2021-10-10',
+    date: 'Published on May 1, 2023',
     link: '/articles/1',
   },
   {
@@ -22,7 +22,7 @@ const articles = [
     description:
       'Primera publicacion en notasdev en donde se mostrara el objetivo del blog, que a temas se estaran tratando y como se ara esta publicacion',
     author: 'dantech',
-    date: '2021-10-10',
+    date: 'Published on May 1, 2023',
     link: '/articles/1',
   },
   {
@@ -30,7 +30,7 @@ const articles = [
     description:
       'Primera publicacion en notasdev en donde se mostrara el objetivo del blog, que a temas se estaran tratando y como se ara esta publicacion',
     author: 'dantech',
-    date: '2021-10-10',
+    date: 'Published on May 1, 2023',
     link: '/articles/1',
   },
   {
@@ -38,7 +38,7 @@ const articles = [
     description:
       'Primera publicacion en notasdev en donde se mostrara el objetivo del blog, que a temas se estaran tratando y como se ara esta publicacion',
     author: 'dantech',
-    date: '2021-10-10',
+    date: 'Published on May 1, 2023',
     link: '/articles/1',
   },
 ];
@@ -46,7 +46,7 @@ const articles = [
 export default function Home() {
   return (
     <>
-      <section className="flex md:flex-row flex-col  justify-between  md:gap-10 my-10 mx-auto  overflow-hidden">
+      <section className="flex md:flex-row flex-col  justify-between  md:gap-10 mt-10 mx-auto  overflow-hidden  border border-gray-800 rounded-md">
         <div className="w-1/2 ">
           <Image
             src={latestpostimg}
@@ -61,7 +61,7 @@ export default function Home() {
           />
         </div>
         <div className="w-1/2 h-full flex flex-col justify-start gap-8">
-          <Link href="/" className='hover:text-[#FADB6F]'>
+          <Link href="/" className="hover:text-[#FADB6F]">
             <Title text="The last post in notasdev wreating for dantech from notion" />
           </Link>
 
@@ -69,6 +69,18 @@ export default function Home() {
             text="  Primera publicacion en notasdev en donde se mostrara el objetivo del
             blog, que a temas se estaran tratando y como se ara esta publicacion"
           />
+
+          <div className="flex flex-wrap gap-2">
+            <div className="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground">
+              AI
+            </div>
+            <div className="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground">
+              Productivity
+            </div>
+            <div className="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground">
+              Workflow
+            </div>
+          </div>
 
           <div className="flex w-full h-auto   justify-end mt-[107px] ">
             <Link href="">
@@ -94,7 +106,15 @@ export default function Home() {
             />
           ))}
         </GridContainer>
+
+        <div className='flex justify-center mt-5'>
+          <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 ">
+          See more
+        </button>
+        </div>
+
       </section>
+      
     </>
   );
 }

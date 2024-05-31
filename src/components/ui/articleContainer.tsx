@@ -63,44 +63,46 @@ export const ArticleContainer = ({
     //   </footer>
     // </article>
 
-    <div className="container mx-auto px-4 py-8  md:py-4">
-      <div className="grid gap-6 md:gap-8">
-        <div className="grid gap-2 md:gap-3">
-          <a className="flex items-start gap-4 group" href="#">
-            <Image
-              src={authorImg}
-              alt="Blog Post Image"
-              width="200"
-              height="150"
-              style={{ aspectRatio: '200 / 150', objectFit: 'cover' }}
-              className="rounded-lg object-cover w-[200px] h-[150px] md:w-[350px] md:h-[180px]"
-            />
-            <div className="flex-1">
-              <h2 className="text-lg font-semibold group-hover:text-primary transition-colors md:text-xl">
-                {title}
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 line-clamp-2 md:line-clamp-3">
-                {description}
-              </p>
-              <div className="flex gap-2 my-4">
-                <span className="text-[#F69F4E] rounded-2xl text-sm ">
-                  #Nextjs
-                </span>
-                <span className="text-[#8D7AFF] rounded-2xl text-sm ">
-                  #Reactjs
-                </span>
-                <span className="text-[#FDF396] rounded-2xl text-sm ">
-                  #Git
-                </span>
-              </div>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                {date}
-              </p>
+
+
+    
+  
+        <div className="grid gap-4 border border-gray-800 p-4 rounded-md">
+          <div className="flex items-center gap-4">
+            <span className="relative flex shrink-0 overflow-hidden rounded-full w-10 h-10">
+              <Image src={authorImg} alt="@shadcn" width={0} height={0} style={{objectFit: 'cover'}} />
+              <span className="flex h-full w-full items-center justify-center rounded-full bg-muted">AC</span>
+            </span>
+            <div>
+              <h3 className="font-semibold">{author}</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">{date}</p>
             </div>
-          </a>
+          </div>
+          <Link href={'/articles/1'}>
+          <h2 className="text-2xl font-bold hover:text-[#FADB6F]">{title}</h2>
+          </Link>
+          
+          <p className="text-gray-500 dark:text-gray-400">
+            {description}
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <div className="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground">
+              AI
+            </div>
+            <div className="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground">
+              Productivity
+            </div>
+            <div className="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground">
+              Workflow
+            </div>
+          </div>
+          <Link href={'/articles71'} className="inline-flex items-center justify-end whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary underline-offset-4 hover:underline h-10 px-4 py-2 hover:text-[#FADB6F]">
+            Read more
+          </Link>
         </div>
-      </div>
-      <div className="flex justify-center mt-8 md:mt-10"></div>
-    </div>
+        
+    
+         
+      
   );
 };

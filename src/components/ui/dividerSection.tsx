@@ -11,7 +11,7 @@ export default function DividerSection({
     <div className="text-left" role="separator">
       <fieldset className="border-t-2 border-[#27263b]">
         <legend
-          className="transition hover:scale-110 motion-reduce:transition-none motion-reduce:hover:scale-100 flex gap-2 justify-center items-center p-2 bg-[#0b1528] border border-[#27263b] rounded-md m-0 text-white uppercase"
+          className="transition hover:scale-110 motion-reduce:transition-none motion-reduce:hover:scale-100 flex gap-2 justify-center items-center p-2 bg-[#0b1528] border border-[#27263b] rounded-md m-0 text-white  text-3xl font-bold mb-6 md:text-4xl"
           id={id}>
           <svg
             width="30px"

@@ -6,5 +6,5 @@ interface GridContainerProps {
 
 export const GridContainer = ({ children}: GridContainerProps) => {
 
-  return <div className='grid grid-cols-1 md:grid-cols-2  gap-5'>{children}</div>;
+  return <div className='grid grid-cols-1 md:grid-cols-1  gap-5'>{children}</div>;
 };

@@ -1,4 +1,3 @@
-'use client';
 
 interface navBarProps {
   name: string;
@@ -24,10 +23,10 @@ export default function NavBar() {
     <>
       <nav
         role="navigation"
-        className="dark:text-white text-[#333333]   md:flex hidden justify-between">
+        className="dark:text-white text-[#333333]   md:flex hidden justify-between items-center border-b-2 border-gray-800 p-4">
         <div>
-          <h1 className="text-3xl">
-            Notas<span className="text-[#FADB6F]">dev</span> 📑
+          <h1 className="text-4xl font-bold">
+            Notas<span className="text-[#FADB6F]">dev</span> 📝
           </h1>
         </div>
         <ul
@@ -37,7 +36,7 @@ export default function NavBar() {
             <li key="label">
               <a
                 href={link}
-                className="md:text-base text-xl  dark:hover:text-yellow-200 hover:text-blue-600  font-medium"
+                className="md:text-base text-2xl  dark:hover:text-yellow-200 hover:text-blue-600  font-medium"
                 role="link"
                 aria-label={label}>
                 {name}

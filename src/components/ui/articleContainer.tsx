@@ -67,7 +67,7 @@ export const ArticleContainer = ({
 
     
   
-        <div className="grid gap-4 border border-gray-800 p-4 rounded-md">
+        <div className="grid gap-4  p-4 rounded-md">
           <div className="flex items-center gap-4">
             <span className="relative flex shrink-0 overflow-hidden rounded-full w-10 h-10">
               <Image src={authorImg} alt="@shadcn" width={0} height={0} style={{objectFit: 'cover'}} />
@@ -97,7 +97,7 @@ export const ArticleContainer = ({
             </div>
           </div>
           <Link href={'/articles71'} className="inline-flex items-center justify-end whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary underline-offset-4 hover:underline h-10 px-4 py-2 hover:text-[#FADB6F]">
-            Read more
+            Leer mas...
           </Link>
         </div>
         

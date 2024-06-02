@@ -1,4 +1,4 @@
-import { Text } from './text';
+
 import { Subtitle } from './subtitle';
 import Link from 'next/link';
 import Image from 'next/image';

@@ -1,4 +1,4 @@
 
-export const Text = ({ text }: { text: string }) => {
+export const TextParagraph = ({ text }: { text: string }) => {
   return <p className="text-balance">{text}</p>;
 }

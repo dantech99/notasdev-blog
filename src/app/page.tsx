@@ -2,51 +2,16 @@ import DividerSection from '@/components/ui/dividerSection';
 import Image from 'next/image';
 import latestpostimg from '../../public/react-paisaje.jpg';
 import { Title } from '@/components/ui/title';
-import { Text } from '@/components/ui/text';
+import { TextParagraph } from '@/components/ui/text';
 import { GridContainer } from '@/components/ui/gridContainer';
-import { ArticleContainer } from '@/components/ui/articleContainer';
-import Icons from '@/icons/exportIcons';
+import ArrowLeft from '@/icons/icons';
 import Link from 'next/link';
+import RendererNotionPost from '@/components/home/rendererNotionPosts';
 
-const articles = [
-  {
-    title: 'Integracion de notion con nextjs y tailwindcss',
-    description:
-      'Primera publicacion en notasdev en donde se mostrara el objetivo del blog, que a temas se estaran tratando y como se ara esta publicacion',
-    author: 'dantech',
-    date: 'Published on May 1, 2023',
-    link: '/articles/1',
-  },
-  {
-    title: 'The last post in notasdev wreating for dantech from notion',
-    description:
-      'Primera publicacion en notasdev en donde se mostrara el objetivo del blog, que a temas se estaran tratando y como se ara esta publicacion',
-    author: 'dantech',
-    date: 'Published on May 1, 2023',
-    link: '/articles/1',
-  },
-  {
-    title: 'The last post in notasdev wreating for dantech from notion',
-    description:
-      'Primera publicacion en notasdev en donde se mostrara el objetivo del blog, que a temas se estaran tratando y como se ara esta publicacion',
-    author: 'dantech',
-    date: 'Published on May 1, 2023',
-    link: '/articles/1',
-  },
-  {
-    title: 'The last post in notasdev wreating for dantech from notion',
-    description:
-      'Primera publicacion en notasdev en donde se mostrara el objetivo del blog, que a temas se estaran tratando y como se ara esta publicacion',
-    author: 'dantech',
-    date: 'Published on May 1, 2023',
-    link: '/articles/1',
-  },
-];
-
-export default function Home() {
+export default async function Home() {
   return (
     <>
-      <section className="flex md:flex-row flex-col  justify-between  md:gap-10 mt-10 mx-auto  overflow-hidden  border border-gray-800 rounded-md">
+      <section className="flex md:flex-row flex-col  justify-between  md:gap-10 mt-10 mx-auto  overflow-hidden ">
         <div className="w-1/2 ">
           <Image
             src={latestpostimg}
@@ -60,12 +25,12 @@ export default function Home() {
             }}
           />
         </div>
-        <div className="w-1/2 h-full flex flex-col justify-start gap-8">
+        <div className="w-1/2 h-full flex flex-col justify-start gap-8 ">
           <Link href="/" className="hover:text-[#FADB6F]">
             <Title text="The last post in notasdev wreating for dantech from notion" />
           </Link>
 
-          <Text
+          <TextParagraph
             text="  Primera publicacion en notasdev en donde se mostrara el objetivo del
             blog, que a temas se estaran tratando y como se ara esta publicacion"
           />
@@ -82,39 +47,26 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex w-full h-auto   justify-end mt-[107px] ">
+          <div className="flex w-full  justify-end items-end mt-16 ">
             <Link href="">
-              <Icons.ArrowLeft />
+              <ArrowLeft />
             </Link>
           </div>
         </div>
       </section>
 
       <DividerSection title="Ultimos articulos" id="articles" />
-
       <section>
         <GridContainer>
-          {/* article */}
-          {articles.map((article, index) => (
-            <ArticleContainer
-              key={index}
-              title={article.title}
-              description={article.description}
-              author={article.author}
-              date={article.date}
-              link={article.link}
-            />
-          ))}
+          <RendererNotionPost />
         </GridContainer>
 
-        <div className='flex justify-center mt-5'>
+        <div className="flex justify-center mt-5">
           <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 ">
-          See more
-        </button>
+            Todos los articulos
+          </button>
         </div>
-
       </section>
-      
     </>
   );
 }

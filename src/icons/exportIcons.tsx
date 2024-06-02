@@ -3,7 +3,7 @@
 import ArrowLeft  from "./icons";
 
 const Icons = {
-  ArrowLeft: ArrowLeft,
+  ArrLeft: ArrowLeft,
 };
 
 export default Icons;

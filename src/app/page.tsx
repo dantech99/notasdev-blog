@@ -8,6 +8,9 @@ import ArrowLeft from '@/icons/icons';
 import Link from 'next/link';
 import RendererNotionPost from '@/components/home/rendererNotionPosts';
 
+export const reavalidate = 10;
+export const dynamic = 'force-dynamic'
+
 export default async function Home() {
   return (
     <>

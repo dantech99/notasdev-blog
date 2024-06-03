@@ -8,6 +8,9 @@ import Text from "@/components/notion/text";
 import styles from "@/styles/article.module.css";
 import { renderBlock } from "@/components/notion/renderer";
 
+export const revalidate = 1;
+export const dynamic = 'force-dynamic';
+
 export async function generateStaticParams(){
   const database = await getDatabase();
   return database?.map((page) => {

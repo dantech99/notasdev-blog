@@ -11,7 +11,7 @@ import { renderBlock } from "@/components/notion/renderer";
 export async function generateStaticParams(){
   const database = await getDatabase();
   return database?.map((page) => {
-    const slug = page.properties.slug?.formula?.string;
+    const slug = page.properties.Slug?.rich_text[0].plain_text;
     return ({id: page.id, slug})
   });
 }

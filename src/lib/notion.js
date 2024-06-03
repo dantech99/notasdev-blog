@@ -3,6 +3,8 @@ import { cache } from 'react';
 
 export const revalidate = 10; // revalidate the data at most every hour
 
+export const dynamic = 'force-dynamic'
+
 const databaseId = process.env.NOTION_DATABASE_ID;
 
 

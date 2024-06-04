@@ -1,3 +1,4 @@
+import ButtonChangeTheme from "../buttonChangeTheme";
 
 interface navBarProps {
   name: string;
@@ -26,7 +27,7 @@ export default function NavBar() {
         className="dark:text-white text-[#333333]   md:flex hidden justify-between items-center border-b-2 border-gray-800 p-4">
         <div>
           <h1 className="text-4xl font-bold">
-            Notas<span className="text-[#FADB6F]">dev</span> 📝
+            Notas<span className="dark:text-[#FADB6F] text-blue-600">dev</span> 📝
           </h1>
         </div>
         <ul
@@ -43,6 +44,9 @@ export default function NavBar() {
               </a>
             </li>
           ))}
+          <li>
+            <ButtonChangeTheme />
+          </li>
         </ul>
       </nav>
       <div

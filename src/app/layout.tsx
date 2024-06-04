@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import NavBar from '@/components/ui/navbar';
 import { GeistSans } from 'geist/font/sans';
+import { ThemeProvider } from 'next-themes';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <html lang="es" className={GeistSans.className}>
       <body className={inter.className}>
         <div className="flex min-h-screen flex-col py-8  mx-auto md:max-w-screen-xl  max-w-screen-sm p-4 ">
@@ -28,5 +30,6 @@ export default function RootLayout({
         </div>
       </body>
     </html>
+    
   );
 }

@@ -1,26 +1,21 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useTheme } from "next-themes";
 
 const ButtonChangeTheme = () => {
-  const [theme, setTheme] = useState(
-    () => localStorage.getItem('theme') || 'dark' // Get initial theme from localStorage or default to 'dark'
-  );
+  const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme); // Store the new theme in localStorage
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
-
-  useEffect(() => {
-    document.body.classList.toggle('dark', theme === 'dark'); // Toggle dark class on body based on theme
-  }, [theme]);
 
   return (
     <button
-      onClick={toggleTheme}>
-      {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+      aria-label="Cambiar tema"
+      onClick={toggleTheme}
+      className="dark:text-white text-[#333333]  dark:hover:text-yellow-200 hover:text-blue-600  font-medium"
+    >
+      {theme === 'dark' ? '🌞' : '🌙'}
     </button>
   );
 };

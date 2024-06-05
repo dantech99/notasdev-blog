@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import {ThemeProvider} from 'next-themes';
 import './globals.css';
 import NavBar from '@/components/navbar';
 import { GeistSans } from 'geist/font/sans';
@@ -17,8 +17,9 @@ export default function RootLayout({
 }>) {
   return (
 
-    <html lang="es" className={GeistSans.className}>
+    <html lang="es" className={GeistSans.className} suppressHydrationWarning>
       <body>
+        <ThemeProvider attribute="class">
         <div className='dark:bg-gradient-to-b dark:from-transparent dark:to-[#000407] dark:bg-[#0E1629] dark:text-white'>
           <div className="flex min-h-screen flex-col py-8  mx-auto md:max-w-screen-xl  max-w-screen-sm p-4 ">
           <header>
@@ -29,6 +30,7 @@ export default function RootLayout({
           <main className="flex w-full flex-col gap-20 ">{children}</main>
         </div>
         </div>
+        </ThemeProvider>
         
       </body>
     </html>

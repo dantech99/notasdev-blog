@@ -1,4 +1,4 @@
-import ButtonChangeTheme from "../buttonChangeTheme";
+import ButtonChangeTheme from "./buttonChangeTheme";
 
 interface navBarProps {
   name: string;
@@ -54,7 +54,9 @@ export default function NavBar() {
         <a
           href="/"
           className="md:text-xl text-2xl dark:text-white text-[#333333] md:font-medium md:tracking-widest md:flex">
-          Notasdev 📑
+          <h1 className="text-4xl font-bold">
+            Notas<span className="dark:text-[#FADB6F] text-blue-600">dev</span> 📝
+          </h1>
         </a>
 
         <a href="mailto:dandevtech99@gmail.com">

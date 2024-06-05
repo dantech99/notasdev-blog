@@ -1,26 +1,28 @@
-'use client'
-import { useState, useEffect } from 'react'
+'use client';
+
+import { useState, useEffect } from 'react';
 
 const ButtonChangeTheme = () => {
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem('theme') || 'dark' // Get initial theme from localStorage or default to 'dark'
+  );
 
-    const [theme, setTheme] = useState('dark')
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme); // Store the new theme in localStorage
+  };
 
-    const toggleTheme = () => {
-        setTheme(theme === 'dark' ? 'light' : 'dark')
-    }
+  useEffect(() => {
+    document.body.classList.toggle('dark', theme === 'dark'); // Toggle dark class on body based on theme
+  }, [theme]);
 
-    useEffect(() => {
-        document.body.className = theme
-    }, [theme])
-    
+  return (
+    <button
+      onClick={toggleTheme}>
+      {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+    </button>
+  );
+};
 
-    return (
-        <button
-            onClick={toggleTheme}
-            className='bg-gray-800 p-3'>
-            Toggle Mode
-        </button>
-    )
-}
-
-export default ButtonChangeTheme
+export default ButtonChangeTheme;

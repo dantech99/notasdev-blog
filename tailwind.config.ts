@@ -9,10 +9,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        dark: {
+          foreground: '#fff', // White for foreground text
+          backgroundStart: '#0E1629', // Dark blue for background start
+          backgroundEnd: '#000407', // Even darker blue for background end
+        },
+        
       },
     },
   },

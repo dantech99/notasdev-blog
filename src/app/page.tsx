@@ -14,8 +14,8 @@ export const dynamic = 'force-dynamic'
 export default async function Home() {
   return (
     <>
-      <section className="flex md:flex-row flex-col  justify-between  md:gap-10 mt-10 mx-auto  overflow-hidden ">
-        <div className="w-1/2 ">
+      <section className="flex md:flex-row flex-col  justify-between gap-5  md:gap-10 mt-10 mx-auto  overflow-hidden ">
+        <div className="w-full ">
           <Image
             src={latestpostimg}
             alt="imagen portada"
@@ -28,13 +28,13 @@ export default async function Home() {
             }}
           />
         </div>
-        <div className="w-1/2 h-full flex flex-col justify-start gap-8 ">
+        <div className="w-full h-full flex flex-col justify-start gap-8 ">
           <Link href="/" className="hover:text-[#FADB6F]">
             <Title text="The last post in notasdev wreating for dantech from notion" />
           </Link>
 
           <TextParagraph
-            text="  Primera publicacion en notasdev en donde se mostrara el objetivo del
+            text="Primera publicacion en notasdev en donde se mostrara el objetivo del
             blog, que a temas se estaran tratando y como se ara esta publicacion"
           />
 

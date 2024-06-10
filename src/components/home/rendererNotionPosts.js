@@ -15,9 +15,13 @@ async function getPosts() {
 
 export default async function RendererNotionPost() {
   const posts = await getPosts();
+
+
+  
+
   return (
     <>
-      {posts?.map((post) => {
+      {posts?.slice(1).map((post) => {
         const slug = post.properties?.Slug?.rich_text[0].text.content;
         return (
           <div className="grid gap-4  p-4 rounded-md" key={post.id}>
@@ -42,6 +46,8 @@ export default async function RendererNotionPost() {
             <Link href={`/articles/${slug}`}>
               <h2 className="text-2xl font-bold hover:text-[#FADB6F]">
                 <Text title={post.properties?.Title?.title} />
+
+                
               </h2>
             </Link>
 

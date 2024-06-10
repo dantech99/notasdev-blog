@@ -1,7 +1,7 @@
 
 
 import ButtonChangeTheme from "./buttonChangeTheme";
-
+import Link from "next/link";
 interface navBarProps {
   name: string;
   link: string;
@@ -28,13 +28,16 @@ export default function NavBar() {
         role="navigation"
         className="dark:text-white text-[#333333]   md:flex hidden justify-between items-center border-b-2 border-gray-800 p-4">
         <div>
-          <h1 className="text-4xl font-bold">
+          <Link href={'/'}>
+            <h1 className="text-4xl font-bold">
             Notas<span className="dark:text-[#FADB6F] text-blue-600">dev</span> 📝
           </h1>
+          </Link>
+        
         </div>
         <ul
           role="list"
-          className="flex flex-row gap-4 justify-center  items-center border-[1px] md:border-none md:p-2 ">
+          className="flex flex-row gap-4   items-center border-[1px] md:border-none md:p-2 ">
           {navigation.map(({ name, link, label }) => (
             <li key="label">
               <a

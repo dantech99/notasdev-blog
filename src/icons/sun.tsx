@@ -1,3 +1,5 @@
+'use client'
+
 export const SunIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     width="24"

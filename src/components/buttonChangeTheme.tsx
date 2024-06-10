@@ -16,7 +16,7 @@ const ButtonChangeTheme = () => {
     <button
       aria-label="Cambiar tema"
       onClick={toggleTheme}
-      className="dark:text-white text-[#333333]  dark:hover:text-yellow-200 hover:text-blue-600  font-medium"
+      className="dark:text-white text-[#333333]  dark:hover:text-yellow-200 hover:text-blue-600  font-medium flex"
     >
       {theme === 'dark' ? <SunIcon/> : <MoonIcon/> }
     </button>

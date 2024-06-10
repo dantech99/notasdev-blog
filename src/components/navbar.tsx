@@ -65,7 +65,7 @@ export default function NavBar() {
         </a>
 
         <a href="mailto:dandevtech99@gmail.com">
-          dandevtech99@gmail.com | Colombia
+          Articulos, noticias, tutoriales y mas
         </a>
       </div>
     </>

@@ -1,3 +1,5 @@
+
+
 import ButtonChangeTheme from "./buttonChangeTheme";
 
 interface navBarProps {
@@ -32,7 +34,7 @@ export default function NavBar() {
         </div>
         <ul
           role="list"
-          className="flex flex-row gap-4  items-center border-[1px] md:border-none md:p-2 ">
+          className="flex flex-row gap-4 justify-center  items-center border-[1px] md:border-none md:p-2 ">
           {navigation.map(({ name, link, label }) => (
             <li key="label">
               <a
